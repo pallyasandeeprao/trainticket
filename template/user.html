@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USER INFO</title>
+    <style>
+        body
+        {
+        background-repeat:no-repeat;
+        background-size:1500px 1020px;
+        }
+         form
+        {
+        text-align:center;
+        margin:250px auto;
+        border:5px solid black;
+        color:white;
+        font-size:22px;
+        width:30%;
+        padding:20px;
+        background:rgba(0,0,0,0.4);
+        border-radius:2px 35px;
+        }
+        input
+        {
+        padding:5px;
+        border-radius:7px;
+        }
+        #hi
+        {
+        background:red;
+        color:white;
+        }
+        #hi:hover
+        {
+        background:green;
+        }
+    </style>
+
+</head>
+<body style="background-image:url('{%static 'image/book.jpg'%}')">
+<form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+<input type="submit">
+</form>
+</body>
+</html>

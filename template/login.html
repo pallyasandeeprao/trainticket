@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USER INFO</title>
+    <style>
+    *
+    {
+        margin:0px;
+    }
+        body
+        {
+        background-repeat:no-repeat;
+        background-size:100% 250%;
+        background-attachment:scroll;
+        }
+        .semo
+        {
+            width:400px;
+            height:200px;
+            margin-top:160px;
+            margin-left:400px;
+            background:rgba(0,0,0,0.4);
+            border:4px solid black;
+            border-radius:15px 5px;
+        }
+        form
+        {
+        font-family:cursive;
+        width:400px;
+        height:200px;
+        text-align:center;
+        color:white;
+        padding-top:25px;
+        }
+        input
+        {
+        margin:0px 0px 20px 20px;
+        }
+        #demo
+        {
+        font-family:cursive;
+        background-color:#EB104F;
+        padding:5px;
+        color:white;
+        }
+        #demo:hover
+        {
+        background-color:#68914C;
+        transition:0.6s;
+        }
+        h1
+        {
+            color:#DDE3E1;
+            text-align:center;
+            text-shadow:1px 1px black,-1px -1px grey;
+        }
+        a
+        {
+        float:right;
+        text-decoration:none;
+        color:white;
+        }
+        .head
+        {
+        width:100%;
+        height:50px;
+        background:rgba(0,0,0,0.4);
+        }
+    </style>
+
+</head>
+<body style="background-image:url('{%static 'image/back.jpg'%}')">
+<div class="head">
+<h1>
+    Welcome To Book Your Train
+</h1>
+</div>
+<a href="/register">Register </a>
+<div class="semo">
+<form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input id="demo" type="submit">
+</form>
+</div>
+</body>
+</html>

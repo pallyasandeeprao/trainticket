@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+    <title>USER INFO</title>
+    <style>
+    *
+    {
+    margin:0px auto;
+    }
+        body
+        {
+        background-repeat:no-repeat;
+        background-size:1500px 1000px;
+        background-attachment:fixed;
+        background-position:center;
+        }
+         form
+        {
+
+        }
+        input
+        {
+        margin:0px 0px 20px 20px;
+        }
+
+        .head
+        {
+        width:100%;
+        height:50px;
+        background:rgba(0,0,0,0.4);
+        }
+        h1
+        {
+            color:#DDE3E1;
+            text-align:center;
+            letter-spacing:5px;
+            text-shadow:1px 1px black,-1px -1px grey;
+        }
+        .fo
+        {
+        background:rgba(0,0,0,0.5);
+
+         border:5px solid black;
+            width:40%;
+            margin-left:350px;
+            margin-top:80px;
+            padding:8px;
+            font-size:22px;
+            color:wheat;
+        }
+        #sub
+        {
+        font-family:cursive;
+        background-color:#EB104F;
+        padding:5px;
+        color:white;
+        margin-left:200px;
+        margin-top:10px;
+        }
+        #sub:hover
+        {
+        background-color:#68914C;
+        transition:0.6s;
+        }
+    </style>
+
+</head>
+
+<body style="background-image:url('{%static 'image/abcd.jpg'%}')">
+<div class="head">
+<h1>
+   TRAVEL WITH US!!
+</h1>
+</div>
+<div class="fo">
+<form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input id="sub" type="submit">
+</form>
+</div>
+
+
+</body>
+</html>
